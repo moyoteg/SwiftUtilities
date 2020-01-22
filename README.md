@@ -1,3 +1,3 @@
 # Utilities
 
-This is where all Swift utilities live.
+A description of this package.
