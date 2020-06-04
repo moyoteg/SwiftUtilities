@@ -7,28 +7,28 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<Int>.size)
     }
 }
 
-extension UInt8 {
+public extension UInt8 {
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<UInt8>.size)
     }
 }
 
-extension UInt16 {
+public extension UInt16 {
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<UInt16>.size)
     }
 }
 
-extension UInt32 {
+public extension UInt32 {
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<UInt32>.size)
@@ -39,12 +39,12 @@ extension UInt32 {
             UInt8((self & 0xFF000000) >> 24),
             UInt8((self & 0x00FF0000) >> 16),
             UInt8((self & 0x0000FF00) >> 8),
-            UInt8(self & 0x000000FF)
+            UInt8( self & 0x000000FF)
         ]
     }
 }
 
-extension UInt64 {
+public extension UInt64 {
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<UInt64>.size)
@@ -59,7 +59,7 @@ extension UInt64 {
             UInt8((self & 0x00000000FF000000) >> 24),
             UInt8((self & 0x0000000000FF0000) >> 16),
             UInt8((self & 0x000000000000FF00) >> 8),
-            UInt8(self & 0x00000000000000FF)
+            UInt8( self & 0x00000000000000FF)
         ]
     }
 }
