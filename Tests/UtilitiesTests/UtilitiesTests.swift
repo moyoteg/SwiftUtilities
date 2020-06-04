@@ -9,9 +9,9 @@ final class UtilitiesTests: XCTestCase {
         
         let dataRepresentation = u64.data
         
-        let byteCount = 8
+        let correctByteCount = 8
         
-        XCTAssertEqual(dataRepresentation.count, byteCount)
+        XCTAssertEqual(dataRepresentation.count, correctByteCount)
     }
     
     static var allTests = [
