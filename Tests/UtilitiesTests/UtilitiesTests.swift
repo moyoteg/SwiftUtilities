@@ -9,6 +9,10 @@ final class UtilitiesTests: XCTestCase {
         XCTAssert(true)
     }
 
+    func testByteArray() {
+        
+    }
+    
     static var allTests = [
         ("testExample", testExample),
     ]
