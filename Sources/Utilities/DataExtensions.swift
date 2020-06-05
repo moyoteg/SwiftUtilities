@@ -13,3 +13,10 @@ public extension Data {
         return self.compactMap { String(format: "%02x", $0) }.joined()
     }
 }
+
+public extension Data {
+    
+    var bytes : [UInt8] {
+        return [UInt8](self)
+    }
+}
