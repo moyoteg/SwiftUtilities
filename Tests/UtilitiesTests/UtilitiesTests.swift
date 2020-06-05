@@ -14,6 +14,14 @@ final class UtilitiesTests: XCTestCase {
         XCTAssertEqual(dataRepresentation.count, correctByteCount)
     }
     
+    func testDataToHexStringConversion() {
+        
+        let data = "test".hexadecimal!
+        let data2 = data.hexadecimal.hexadecimal
+        
+        XCTAssertEqual(data, data2)
+    }
+    
     static var allTests = [
         ("testByteCount", testByteCount),
     ]

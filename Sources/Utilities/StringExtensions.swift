@@ -8,35 +8,71 @@
 import Foundation
 
 public extension String {
-    
-    enum ExtendedEncoding {
-        case hexadecimal
+
+    /// Create `Data` from hexadecimal string representation
+    ///
+    /// This creates a `Data` object from hex string. Note, if the string has any spaces or non-hex characters (e.g. starts with '<' and with a '>'), those are ignored and only hex characters are processed.
+    ///
+    /// - returns: Data represented by this hexadecimal string.
+
+    var hexadecimal: Data? {
+        var data = Data(capacity: self.count / 2)
+
+        let regex = try! NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive)
+        
+        regex.enumerateMatches(in: self, range: NSRange(startIndex..., in: self)) { match, _, _ in
+            
+            let byteString = (self as NSString).substring(with: match!.range)
+            
+            let num = UInt8(byteString, radix: 16)!
+            
+            data.append(num)
+        }
+
+        guard data.count > 0 else { return nil }
+
+        return data
     }
 
-    func data(using encoding:ExtendedEncoding) -> Data? {
-        
-        let hexStr = self.dropFirst(self.hasPrefix("0x") ? 2 : 0)
+    
+    /// Create `String` representation of `Data` created from hexadecimal string representation
+    ///
+    /// This takes a hexadecimal representation and creates a String object from that. Note, if the string has any spaces, those are removed. Also if the string started with a `<` or ended with a `>`, those are removed, too.
+    ///
+    /// For example,
+    ///
+    ///     String(hexadecimal: "<666f6f>")
+    ///
+    /// is
+    ///
+    ///     Optional("foo")
+    ///
+    /// - returns: `String` represented by this hexadecimal string.
 
-        guard hexStr.count % 2 == 0 else { return nil }
-
-        var newData = Data(capacity: hexStr.count/2)
-
-        var indexIsEven = true
-        
-        for i in hexStr.indices {
-            
-            if indexIsEven {
-                
-                let byteRange = i...hexStr.index(after: i)
-                
-                guard let byte = UInt8(hexStr[byteRange], radix: 16) else { return nil }
-                
-                newData.append(byte)
-            }
-            
-            indexIsEven.toggle()
+    init?(hexadecimal string: String, encoding: String.Encoding = .utf8) {
+        guard let data = string.hexadecimal else {
+            return nil
         }
-        
-        return newData
+
+        self.init(data: data, encoding: encoding)
+    }
+
+    /// Create hexadecimal string representation of `String` object.
+    ///
+    /// For example,
+    ///
+    ///     "foo".hexadecimalString()
+    ///
+    /// is
+    ///
+    ///     Optional("666f6f")
+    ///
+    /// - parameter encoding: The `String.Encoding` that indicates how the string should be converted to `Data` before performing the hexadecimal conversion.
+    ///
+    /// - returns: `String` representation of this String object.
+
+    func hexadecimalString(encoding: String.Encoding = .utf8) -> String? {
+        return data(using: encoding)?
+            .hexadecimal
     }
 }
