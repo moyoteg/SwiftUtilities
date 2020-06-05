@@ -9,7 +9,7 @@ import Foundation
 
 public extension Data {
     
-    var stringRepresentation: String {
+    var hexStringRepresentation: String {
         return self.compactMap { String(format: "%02x", $0) }.joined()
     }
 }
