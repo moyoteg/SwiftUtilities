@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     var boolValue: Bool {
         return self != 0
     }
