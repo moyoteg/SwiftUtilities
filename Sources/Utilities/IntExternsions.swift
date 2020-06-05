@@ -7,6 +7,12 @@
 
 import Foundation
 
+extension Int {
+    var boolValue: Bool {
+        return self != 0
+    }
+}
+
 public extension Int {
     var data: Data {
         var int = self
