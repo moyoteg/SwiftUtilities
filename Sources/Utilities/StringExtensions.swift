@@ -15,7 +15,7 @@ public extension String {
     ///
     /// - returns: Data represented by this hexadecimal string.
 
-    var hexadecimal: Data? {
+    var asHexadecimalData: Data? {
         var data = Data(capacity: self.count / 2)
 
         let regex = try! NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive)
@@ -50,7 +50,7 @@ public extension String {
     /// - returns: `String` represented by this hexadecimal string.
 
     init?(hexadecimal string: String, encoding: String.Encoding = .utf8) {
-        guard let data = string.hexadecimal else {
+        guard let data = string.asHexadecimalData else {
             return nil
         }
 
@@ -71,8 +71,8 @@ public extension String {
     ///
     /// - returns: `String` representation of this String object.
 
-    func hexadecimalString(encoding: String.Encoding = .utf8) -> String? {
+    func asHexadecimalString(encoding: String.Encoding = .utf8) -> String? {
         return data(using: encoding)?
-            .hexadecimal
+            .asHexadecimalString
     }
 }
