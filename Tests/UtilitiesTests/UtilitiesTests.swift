@@ -38,5 +38,6 @@ final class UtilitiesTests: XCTestCase {
     static var allTests = [
         ("testByteCount", testByteCount),
         ("testDataToHexStringConversion", testDataToHexStringConversion),
+        ("testStringToHexStringConversion", testStringToHexStringConversion),
     ]
 }
