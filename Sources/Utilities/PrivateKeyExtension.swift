@@ -10,7 +10,7 @@ import CryptoKit
 
 public extension SecureEnclave.P256.KeyAgreement.PrivateKey {
     
-    func pemFormatString() -> String {
+    var publicKeyPEMFormatString: String {
         let keyBase64 = self.publicKey.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
         var pemString = ""
         let a:[String] = keyBase64.components(separatedBy: "\r\n")
@@ -23,8 +23,8 @@ public extension SecureEnclave.P256.KeyAgreement.PrivateKey {
         return pemString
     }
     
-    func pemFormatString(private key: SecureEnclave.P256.KeyAgreement.PrivateKey) -> String {
-        let keyBase64 = key.dataRepresentation.base64EncodedString(options: [.lineLength64Characters])
+    var privateKeyPEMFormatString: String {
+        let keyBase64 = self.dataRepresentation.base64EncodedString(options: [.lineLength64Characters])
         var pemString = ""
         pemString.append("-----BEGIN PRIVATE KEY-----")
         pemString.append(keyBase64)
