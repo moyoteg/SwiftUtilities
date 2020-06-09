@@ -34,7 +34,7 @@ final class UtilitiesTests: XCTestCase {
         // is string converted to hex string correct?
         XCTAssertEqual(string.asHexadecimalString(), correctConvertedHexString)
     }
-        
+    
     static var allTests = [
         ("testByteCount", testByteCount),
         ("testDataToHexStringConversion", testDataToHexStringConversion),
