@@ -8,6 +8,13 @@
 import Foundation
 import CryptoKit
 
+extension P256.Signing.PrivateKey: Equatable {
+    
+    public static func == (lhs: P256.Signing.PrivateKey, rhs: P256.Signing.PrivateKey) -> Bool {
+        lhs.rawRepresentation == rhs.rawRepresentation
+    }
+}
+
 public extension SecureEnclave.P256.KeyAgreement.PrivateKey {
     
     var PEMFormatString: String {
