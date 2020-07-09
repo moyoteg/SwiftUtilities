@@ -9,9 +9,30 @@ import Foundation
 import CryptoKit
 
 extension SecureEnclave.P256.Signing.PrivateKey: Equatable {
-    
-    public static func == (lhs: SecureEnclave.P256.Signing.PrivateKey, rhs: SecureEnclave.P256.Signing.PrivateKey) -> Bool {
+    public static func == (lhs: SecureEnclave.P256.Signing.PrivateKey,
+                           rhs: SecureEnclave.P256.Signing.PrivateKey) -> Bool {
         lhs.dataRepresentation == rhs.dataRepresentation
+    }
+}
+
+extension SecureEnclave.P256.KeyAgreement.PrivateKey: Equatable {
+    public static func == (lhs: SecureEnclave.P256.KeyAgreement.PrivateKey,
+                           rhs: SecureEnclave.P256.KeyAgreement.PrivateKey) -> Bool {
+        return lhs.dataRepresentation == rhs.dataRepresentation
+    }
+}
+
+extension P256.KeyAgreement.PrivateKey: Equatable {
+    public static func == (lhs: P256.KeyAgreement.PrivateKey,
+                           rhs: P256.KeyAgreement.PrivateKey) -> Bool {
+        return lhs.rawRepresentation == rhs.rawRepresentation
+    }
+}
+
+extension P256.KeyAgreement.PublicKey: Equatable {
+    public static func == (lhs: P256.KeyAgreement.PublicKey,
+                           rhs: P256.KeyAgreement.PublicKey) -> Bool {
+        return lhs.rawRepresentation == rhs.rawRepresentation
     }
 }
 
