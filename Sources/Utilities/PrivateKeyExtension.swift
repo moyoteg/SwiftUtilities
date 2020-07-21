@@ -29,6 +29,13 @@ extension P256.Signing.PrivateKey: Equatable {
     }
 }
 
+extension P256.Signing.PrivateKey: Hashable {
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.hashValue)
+    }
+}
+
 extension P256.Signing.PublicKey: Equatable {
     public static func == (lhs: P256.Signing.PublicKey,
                            rhs: P256.Signing.PublicKey) -> Bool {
