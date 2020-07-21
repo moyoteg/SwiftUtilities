@@ -22,6 +22,20 @@ extension SecureEnclave.P256.KeyAgreement.PrivateKey: Equatable {
     }
 }
 
+extension P256.Signing.PrivateKey: Equatable {
+    public static func == (lhs: P256.Signing.PrivateKey,
+                           rhs: P256.Signing.PrivateKey) -> Bool {
+        return lhs.rawRepresentation == rhs.rawRepresentation
+    }
+}
+
+extension P256.Signing.PublicKey: Equatable {
+    public static func == (lhs: P256.Signing.PublicKey,
+                           rhs: P256.Signing.PublicKey) -> Bool {
+        return lhs.rawRepresentation == rhs.rawRepresentation
+    }
+}
+
 extension P256.KeyAgreement.PrivateKey: Equatable {
     public static func == (lhs: P256.KeyAgreement.PrivateKey,
                            rhs: P256.KeyAgreement.PrivateKey) -> Bool {
