@@ -101,3 +101,79 @@ public extension P256.KeyAgreement.PublicKey {
         return pemString
     }
 }
+
+extension P256.KeyAgreement.PublicKey: Codable {
+    
+    public enum CodingKeys: CodingKey {
+        case key
+    }
+    
+    public enum VersionError: Error {
+        case encoding, decoding
+    }
+    
+    public init(from decoder: Decoder) throws {
+        do {
+        
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let key = try container.decode(P256.KeyAgreement.PublicKey.self, forKey: .key)
+            self = key
+            
+        } catch {
+            print("P256.KeyAgreement.PublicKey: failed to decode: \(error)")
+            throw VersionError.decoding
+        }
+        
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+
+        do {
+        
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(self, forKey: .key)
+            
+        } catch {
+            print("P256.KeyAgreement.PublicKey: failed to encode: \(error)")
+            throw VersionError.encoding
+        }
+    }
+}
+
+extension P256.KeyAgreement.PrivateKey: Codable {
+    
+    public enum CodingKeys: CodingKey {
+        case key
+    }
+    
+    public enum VersionError: Error {
+        case encoding, decoding
+    }
+    
+    public init(from decoder: Decoder) throws {
+        do {
+        
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            let key = try container.decode(P256.KeyAgreement.PrivateKey.self, forKey: .key)
+            self = key
+            
+        } catch {
+            print("P256.KeyAgreement.PrivateKey: failed to decode: \(error)")
+            throw VersionError.decoding
+        }
+        
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+
+        do {
+        
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(self, forKey: .key)
+            
+        } catch {
+            print("P256.KeyAgreement.PrivateKey: failed to encode: \(error)")
+            throw VersionError.encoding
+        }
+    }
+}
