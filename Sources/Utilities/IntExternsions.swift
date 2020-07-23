@@ -69,3 +69,19 @@ public extension UInt64 {
         ]
     }
 }
+
+
+public extension UnsignedInteger {
+    init(_ bytes: [UInt8]) {
+        precondition(bytes.count <= MemoryLayout<Self>.size)
+
+        var value: UInt64 = 0
+
+        for byte in bytes {
+            value <<= 8
+            value |= UInt64(byte)
+        }
+
+        self.init(value)
+    }
+}
