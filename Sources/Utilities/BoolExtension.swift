@@ -12,3 +12,10 @@ public extension Bool {
         return self ? 1 : 0
     }
 }
+
+public extension Bool {
+    var data: Data {
+        var int = self
+        return Data(bytes: &int, count: MemoryLayout<Bool>.size)
+    }
+}
