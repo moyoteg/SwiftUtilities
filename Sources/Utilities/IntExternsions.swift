@@ -70,7 +70,6 @@ public extension UInt64 {
     }
 }
 
-
 public extension UnsignedInteger {
     init(_ bytes: [UInt8]) {
         precondition(bytes.count <= MemoryLayout<Self>.size)
