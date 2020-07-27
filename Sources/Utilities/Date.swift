@@ -17,10 +17,10 @@ public extension Date {
     }
     
     init(milliseconds: Int64) {
-        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000.0)
     }
     
     init(milliseconds: UInt64) {
-        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000.0)
     }
 }
