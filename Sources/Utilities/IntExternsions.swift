@@ -100,3 +100,14 @@ public extension UnsignedInteger {
         self.init(value)
     }
 }
+
+public protocol IntegerTransform: Sequence where Element: FixedWidthInteger {
+    func integer<I: FixedWidthInteger>(endian: Endian) -> I
+}
+
+public extension IntegerTransform {
+    func integer<I: FixedWidthInteger>(endian: Endian) -> I {
+        let f = { (accum: I, next: Element) in accum &<< next.bitWidth | I(next) }
+        return endian == .big ? reduce(0, f) : reversed().reduce(0, f)
+    }
+}

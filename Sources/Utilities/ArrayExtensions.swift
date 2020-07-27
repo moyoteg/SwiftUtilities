@@ -24,3 +24,5 @@ public extension Array where Element == UInt8 {
         return Data(self)
     }
 }
+
+extension Array: IntegerTransform where Element: FixedWidthInteger {}
