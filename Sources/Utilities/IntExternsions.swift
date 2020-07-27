@@ -20,6 +20,13 @@ public extension Int {
     }
 }
 
+public extension Int64 {
+    var data: Data {
+        var int = self
+        return Data(bytes: &int, count: MemoryLayout<Int64>.size)
+    }
+}
+
 public extension Int8 {
     var data: Data {
         var int = self
