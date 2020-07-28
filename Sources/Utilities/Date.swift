@@ -9,11 +9,11 @@ import Foundation
 
 public extension Date {
     var millisecondsSince1970: Int64 {
-        return Int64((self.timeIntervalSince1970 * 1000.0))
+        return Int64((self.timeIntervalSince1970 * 1000.0).rounded())
     }
 
     var unsignedMillisecondsSince1970: UInt64 {
-        return UInt64((self.timeIntervalSince1970 * 1000.0))
+        return UInt64((self.timeIntervalSince1970 * 1000.0).rounded())
     }
     
     init(milliseconds: Int64) {
