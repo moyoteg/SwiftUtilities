@@ -8,12 +8,23 @@
 import Foundation
 
 public extension Date {
-    var millisecondsSince1970: Int64 {
-        return Int64((self.timeIntervalSince1970 * 1000.0).rounded())
+    
+    func millisecondsSince1970(endianess: Endian) -> Int64 {
+        switch endianess {
+        case .big:
+            return Int64(bigEndian: Int64((self.timeIntervalSince1970 * 1000.0).rounded()))
+        case .little:
+            return Int64(littleEndian: Int64((self.timeIntervalSince1970 * 1000.0).rounded()))
+        }
     }
-
-    var unsignedMillisecondsSince1970: UInt64 {
-        return UInt64((self.timeIntervalSince1970 * 1000.0).rounded())
+    
+    func millisecondsSince1970(endianess: Endian) -> UInt64 {
+        switch endianess {
+        case .big:
+            return UInt64(bigEndian: UInt64((self.timeIntervalSince1970 * 1000.0).rounded()))
+        case .little:
+            return UInt64(littleEndian: UInt64((self.timeIntervalSince1970 * 1000.0).rounded()))
+        }
     }
     
     init(milliseconds: Int64) {
