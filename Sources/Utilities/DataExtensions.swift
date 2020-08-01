@@ -8,15 +8,15 @@
 import Foundation
 
 public extension Data {
-    
+
     var asHexadecimalString: String {
         return self.compactMap { String(format: "%02x", $0) }.joined()
     }
 }
 
 public extension Data {
-    
-    var asByteArray : [UInt8] {
+
+    var asByteArray: [UInt8] {
         return [UInt8](self)
     }
 }
@@ -29,7 +29,7 @@ public extension Data {
         // Convert 0 ... 9, a ... f, A ...F to their decimal value,
         // return nil for all other input characters
         func decodeNibble(u: UInt16) -> UInt8? {
-            switch(u) {
+            switch u {
             case 0x30 ... 0x39:
                 return UInt8(u - 0x30)
             case 0x41 ... 0x46:

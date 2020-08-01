@@ -11,7 +11,7 @@ public extension String {
     var urlEscaped: String {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
-    
+
     var utf8Encoded: Data {
         return data(using: .utf8)!
     }
@@ -29,13 +29,13 @@ public extension String {
         var data = Data(capacity: self.count / 2)
 
         let regex = try! NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive)
-        
+
         regex.enumerateMatches(in: self, range: NSRange(startIndex..., in: self)) { match, _, _ in
-            
+
             let byteString = (self as NSString).substring(with: match!.range)
-            
+
             let num = UInt8(byteString, radix: 16)!
-            
+
             data.append(num)
         }
 
@@ -44,7 +44,6 @@ public extension String {
         return data
     }
 
-    
     /// Create `String` representation of `Data` created from hexadecimal string representation
     ///
     /// This takes a hexadecimal representation and creates a String object from that. Note, if the string has any spaces, those are removed. Also if the string started with a `<` or ended with a `>`, those are removed, too.

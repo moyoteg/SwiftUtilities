@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public extension Float32 {
     var data: Data {
         var int = self

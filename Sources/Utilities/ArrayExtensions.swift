@@ -6,7 +6,7 @@
 import Foundation
 
 public extension Array {
-    
+
     subscript (safe index: Int) -> Element? {
         get {
             return index < count && index >= 0 ? self[index] : nil
@@ -20,7 +20,7 @@ public extension Array {
 }
 
 public extension Array where Element == UInt8 {
-    var data : Data{
+    var data: Data {
         return Data(self)
     }
 }

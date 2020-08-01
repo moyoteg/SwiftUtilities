@@ -14,7 +14,7 @@ public extension Int {
 }
 
 public extension SignedInteger {
-    
+
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<Self>.size)
@@ -22,14 +22,14 @@ public extension SignedInteger {
 }
 
 public extension UnsignedInteger {
-    
+
     var data: Data {
         var int = self
         return Data(bytes: &int, count: MemoryLayout<Self>.size)
     }
-    
+
     init(_ bytes: [UInt8]) {
-        
+
         precondition(bytes.count <= MemoryLayout<Self>.size)
 
         var value: Self = 0

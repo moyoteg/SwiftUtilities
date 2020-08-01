@@ -30,7 +30,7 @@ extension P256.Signing.PrivateKey: Equatable {
 }
 
 extension P256.Signing.PrivateKey: Hashable {
-    
+
     public func hash(into hasher: inout Hasher) {
         hasher.combine(self.hashValue)
     }
@@ -58,7 +58,7 @@ extension P256.KeyAgreement.PublicKey: Equatable {
 }
 
 public extension SecureEnclave.P256.KeyAgreement.PrivateKey {
-    
+
     var PEMFormatString: String {
         let keyBase64 = self.dataRepresentation.base64EncodedString(options: [.lineLength64Characters])
         var pemString = ""
@@ -71,11 +71,11 @@ public extension SecureEnclave.P256.KeyAgreement.PrivateKey {
 }
 
 public extension P256.KeyAgreement.PrivateKey {
-    
+
     var PEMFormatString: String {
         let keyBase64 = self.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
         var pemString = ""
-        let components:[String] = keyBase64.components(separatedBy: "\r\n")
+        let components: [String] = keyBase64.components(separatedBy: "\r\n")
         pemString.append("-----BEGIN PUBLIC KEY-----\n")
         components.forEach { (string) in
             pemString.append(string)
@@ -87,11 +87,11 @@ public extension P256.KeyAgreement.PrivateKey {
 }
 
 public extension P256.KeyAgreement.PublicKey {
-    
+
     var PEMFormatString: String {
         let keyBase64 = self.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
         var pemString = ""
-        let components:[String] = keyBase64.components(separatedBy: "\r\n")
+        let components: [String] = keyBase64.components(separatedBy: "\r\n")
         pemString.append("-----BEGIN PUBLIC KEY-----\n")
         components.forEach { (string) in
             pemString.append(string)
@@ -103,36 +103,36 @@ public extension P256.KeyAgreement.PublicKey {
 }
 
 extension P256.KeyAgreement.PublicKey: Codable {
-    
+
     public enum CodingKeys: CodingKey {
         case key
     }
-    
+
     public enum VersionError: Error {
         case encoding, decoding
     }
-    
+
     public init(from decoder: Decoder) throws {
         do {
-        
+
             let container = try decoder.container(keyedBy: CodingKeys.self)
             let key = try container.decode(P256.KeyAgreement.PublicKey.self, forKey: .key)
             self = key
-            
+
         } catch {
             print("P256.KeyAgreement.PublicKey: failed to decode: \(error)")
             throw VersionError.decoding
         }
-        
+
     }
-    
+
     public func encode(to encoder: Encoder) throws {
 
         do {
-        
+
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(self, forKey: .key)
-            
+
         } catch {
             print("P256.KeyAgreement.PublicKey: failed to encode: \(error)")
             throw VersionError.encoding
@@ -141,36 +141,36 @@ extension P256.KeyAgreement.PublicKey: Codable {
 }
 
 extension P256.KeyAgreement.PrivateKey: Codable {
-    
+
     public enum CodingKeys: CodingKey {
         case key
     }
-    
+
     public enum VersionError: Error {
         case encoding, decoding
     }
-    
+
     public init(from decoder: Decoder) throws {
         do {
-        
+
             let container = try decoder.container(keyedBy: CodingKeys.self)
             let key = try container.decode(P256.KeyAgreement.PrivateKey.self, forKey: .key)
             self = key
-            
+
         } catch {
             print("P256.KeyAgreement.PrivateKey: failed to decode: \(error)")
             throw VersionError.decoding
         }
-        
+
     }
-    
+
     public func encode(to encoder: Encoder) throws {
 
         do {
-        
+
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(self, forKey: .key)
-            
+
         } catch {
             print("P256.KeyAgreement.PrivateKey: failed to encode: \(error)")
             throw VersionError.encoding
