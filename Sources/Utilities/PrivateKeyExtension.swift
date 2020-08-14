@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared
 import CryptoKit
 
 extension SecureEnclave.P256.Signing.PrivateKey: Equatable {
@@ -175,5 +176,11 @@ extension P256.KeyAgreement.PrivateKey: Codable {
             print("P256.KeyAgreement.PrivateKey: failed to encode: \(error)")
             throw VersionError.encoding
         }
+    }
+}
+
+extension P256.KeyAgreement.PrivateKey: CustomStringConvertible {
+    public var description: String {
+        return "\(rawRepresentation)"
     }
 }
