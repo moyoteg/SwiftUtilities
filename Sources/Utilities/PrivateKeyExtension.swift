@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Shared
 import CryptoKit
 
 extension SecureEnclave.P256.Signing.PrivateKey: Equatable {
