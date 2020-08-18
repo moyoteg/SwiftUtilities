@@ -31,51 +31,6 @@ extension P256.KeyAgreement.PublicKey: Equatable {
     }
 }
 
-public extension SecureEnclave.P256.KeyAgreement.PrivateKey {
-
-    var PEMFormatString: String {
-        let keyBase64 = self.dataRepresentation.base64EncodedString(options: [.lineLength64Characters])
-        var pemString = ""
-        pemString.append("-----BEGIN PRIVATE KEY-----\n")
-        pemString.append(keyBase64)
-        pemString.append("\n")
-        pemString.append("-----END PRIVATE KEY-----\n")
-        return pemString
-    }
-}
-
-public extension P256.KeyAgreement.PrivateKey {
-
-    var PEMFormatString: String {
-        let keyBase64 = self.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
-        var pemString = ""
-        let components: [String] = keyBase64.components(separatedBy: "\r\n")
-        pemString.append("-----BEGIN PUBLIC KEY-----\n")
-        components.forEach { (string) in
-            pemString.append(string)
-            pemString.append("\n")
-        }
-        pemString.append("-----END PUBLIC KEY-----\n")
-        return pemString
-    }
-}
-
-public extension P256.KeyAgreement.PublicKey {
-
-    var PEMFormatString: String {
-        let keyBase64 = self.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
-        var pemString = ""
-        let components: [String] = keyBase64.components(separatedBy: "\r\n")
-        pemString.append("-----BEGIN PUBLIC KEY-----\n")
-        components.forEach { (string) in
-            pemString.append(string)
-            pemString.append("\n")
-        }
-        pemString.append("-----END PUBLIC KEY-----\n")
-        return pemString
-    }
-}
-
 // MARK: Signing
 
 extension SecureEnclave.P256.Signing.PrivateKey: Equatable {
@@ -103,51 +58,6 @@ extension P256.Signing.PublicKey: Equatable {
     public static func == (lhs: P256.Signing.PublicKey,
                            rhs: P256.Signing.PublicKey) -> Bool {
         return lhs.rawRepresentation == rhs.rawRepresentation
-    }
-}
-
-public extension SecureEnclave.P256.Signing.PrivateKey {
-
-    var PEMFormatString: String {
-        let keyBase64 = self.dataRepresentation.base64EncodedString(options: [.lineLength64Characters])
-        var pemString = ""
-        pemString.append("-----BEGIN PRIVATE KEY-----\n")
-        pemString.append(keyBase64)
-        pemString.append("\n")
-        pemString.append("-----END PRIVATE KEY-----\n")
-        return pemString
-    }
-}
-
-public extension P256.Signing.PrivateKey {
-
-    var PEMFormatString: String {
-        let keyBase64 = self.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
-        var pemString = ""
-        let components: [String] = keyBase64.components(separatedBy: "\r\n")
-        pemString.append("-----BEGIN PUBLIC KEY-----\n")
-        components.forEach { (string) in
-            pemString.append(string)
-            pemString.append("\n")
-        }
-        pemString.append("-----END PUBLIC KEY-----\n")
-        return pemString
-    }
-}
-
-public extension P256.Signing.PublicKey {
-
-    var PEMFormatString: String {
-        let keyBase64 = self.rawRepresentation.base64EncodedString(options: [.lineLength64Characters])
-        var pemString = ""
-        let components: [String] = keyBase64.components(separatedBy: "\r\n")
-        pemString.append("-----BEGIN PUBLIC KEY-----\n")
-        components.forEach { (string) in
-            pemString.append(string)
-            pemString.append("\n")
-        }
-        pemString.append("-----END PUBLIC KEY-----\n")
-        return pemString
     }
 }
 
