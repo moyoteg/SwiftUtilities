@@ -7,6 +7,8 @@
 
 import Foundation
 import CryptoKit
+import Shared
+import log
 
 extension SecureEnclave.P256.KeyAgreement.PrivateKey: Equatable {
     public static func == (lhs: SecureEnclave.P256.KeyAgreement.PrivateKey,
@@ -79,7 +81,7 @@ extension P256.KeyAgreement.PublicKey: Codable {
             self = key
 
         } catch {
-            print("P256.KeyAgreement.PublicKey: failed to decode: \(error)")
+            Logger.log("P256.KeyAgreement.PublicKey: failed to decode: \(error)")
             throw VersionError.decoding
         }
 
@@ -93,7 +95,7 @@ extension P256.KeyAgreement.PublicKey: Codable {
             try container.encode(self, forKey: .key)
 
         } catch {
-            print("P256.KeyAgreement.PublicKey: failed to encode: \(error)")
+            Logger.log("P256.KeyAgreement.PublicKey: failed to encode: \(error)")
             throw VersionError.encoding
         }
     }
@@ -117,7 +119,7 @@ extension P256.KeyAgreement.PrivateKey: Codable {
             self = key
 
         } catch {
-            print("P256.KeyAgreement.PrivateKey: failed to decode: \(error)")
+            Logger.log("P256.KeyAgreement.PrivateKey: failed to decode: \(error)")
             throw VersionError.decoding
         }
 
@@ -131,7 +133,7 @@ extension P256.KeyAgreement.PrivateKey: Codable {
             try container.encode(self, forKey: .key)
 
         } catch {
-            print("P256.KeyAgreement.PrivateKey: failed to encode: \(error)")
+            Logger.log("P256.KeyAgreement.PrivateKey: failed to encode: \(error)")
             throw VersionError.encoding
         }
     }
