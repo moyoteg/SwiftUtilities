@@ -8,6 +8,19 @@
 import Foundation
 
 public extension String {
+   
+    func convertToValidFileName() -> String {
+       let invalidFileNameCharactersRegex = "[^a-zA-Z0-9_]+"
+       let fullRange = startIndex..<endIndex
+       let validName = replacingOccurrences(of: invalidFileNameCharactersRegex,
+                                          with: "-",
+                                       options: .regularExpression,
+                                         range: fullRange)
+       return validName
+   }
+}
+
+public extension String {
     var urlEscaped: String {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
