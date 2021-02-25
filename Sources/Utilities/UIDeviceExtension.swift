@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+#if !os(tvOS)
 import DeviceKit
 
 public extension UIDevice {
@@ -22,3 +23,4 @@ public extension UIDevice {
     }
     
 }
+#endif

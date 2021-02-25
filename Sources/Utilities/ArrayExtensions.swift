@@ -26,3 +26,11 @@ public extension Array where Element == UInt8 {
 }
 
 extension Array: IntegerTransform where Element: FixedWidthInteger {}
+
+extension Array {
+    subscript(circular index: Int) -> Element? {
+        guard index >= 0 && !isEmpty else { return nil }
+        guard index >= count else { return self[index] }
+        return self[index % count]
+    }
+}
