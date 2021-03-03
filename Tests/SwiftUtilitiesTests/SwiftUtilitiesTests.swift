@@ -1,7 +1,7 @@
 import XCTest
-@testable import Utilities
+@testable import SwiftUtilities
 
-final class UtilitiesTests: XCTestCase {
+final class SwiftUtilitiesTests: XCTestCase {
 
     func testByteCount() {
 
