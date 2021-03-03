@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		"Utilities::UtilitiesPackageTests::ProductTarget" /* SwiftUtilitiesPackageTests */ = {
+		"SwiftUtilities::SwiftUtilitiesPackageTests::ProductTarget" /* SwiftUtilitiesPackageTests */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = OBJ_36 /* Build configuration list for PBXAggregateTarget "SwiftUtilitiesPackageTests" */;
 			buildPhases = (
@@ -16,7 +16,7 @@
 				OBJ_39 /* PBXTargetDependency */,
 			);
 			name = SwiftUtilitiesPackageTests;
-			productName = UtilitiesPackageTests;
+			productName = SwiftUtilitiesPackageTests;
 		};
 /* End PBXAggregateTarget section */
 
@@ -37,7 +37,7 @@
 		OBJ_34 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_45 /* SwiftUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SwiftUtilitiesTests.swift */; };
 		OBJ_46 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* XCTestManifests.swift */; };
-		OBJ_48 /* SwiftUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Utilities::Utilities::Product" /* SwiftUtilities.framework */; };
+		OBJ_48 /* SwiftUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftUtilities::SwiftUtilities::Product" /* SwiftUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,15 +45,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "Utilities::Utilities";
-			remoteInfo = Utilities;
+			remoteGlobalIDString = "SwiftUtilities::SwiftUtilities";
+			remoteInfo = SwiftUtilities;
 		};
 		04FFAF2D2488816E00485F68 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "Utilities::UtilitiesTests";
-			remoteInfo = UtilitiesTests;
+			remoteGlobalIDString = "SwiftUtilities::SwiftUtilitiesTests";
+			remoteInfo = SwiftUtilitiesTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -75,8 +75,8 @@
 		OBJ_19 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
-		"Utilities::Utilities::Product" /* SwiftUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"Utilities::UtilitiesTests::Product" /* SwiftUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SwiftUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftUtilities::SwiftUtilities::Product" /* SwiftUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftUtilities::SwiftUtilitiesTests::Product" /* SwiftUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = SwiftUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 		OBJ_16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Utilities::UtilitiesTests::Product" /* SwiftUtilitiesTests.xctest */,
-				"Utilities::Utilities::Product" /* SwiftUtilities.framework */,
+				"SwiftUtilities::SwiftUtilitiesTests::Product" /* SwiftUtilitiesTests.xctest */,
+				"SwiftUtilities::SwiftUtilities::Product" /* SwiftUtilities.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -168,7 +168,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		"Utilities::SwiftPMPackageDescription" /* SwiftUtilitiesPackageDescription */ = {
+		"SwiftUtilities::SwiftPMPackageDescription" /* SwiftUtilitiesPackageDescription */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "SwiftUtilitiesPackageDescription" */;
 			buildPhases = (
@@ -179,10 +179,10 @@
 			dependencies = (
 			);
 			name = SwiftUtilitiesPackageDescription;
-			productName = UtilitiesPackageDescription;
+			productName = SwiftUtilitiesPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
-		"Utilities::Utilities" /* SwiftUtilities */ = {
+		"SwiftUtilities::SwiftUtilities" /* SwiftUtilities */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_21 /* Build configuration list for PBXNativeTarget "SwiftUtilities" */;
 			buildPhases = (
@@ -196,11 +196,11 @@
 			name = SwiftUtilities;
 			packageProductDependencies = (
 			);
-			productName = Utilities;
-			productReference = "Utilities::Utilities::Product" /* SwiftUtilities.framework */;
+			productName = SwiftUtilities;
+			productReference = "SwiftUtilities::SwiftUtilities::Product" /* SwiftUtilities.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"Utilities::UtilitiesTests" /* SwiftUtilitiesTests */ = {
+		"SwiftUtilities::SwiftUtilitiesTests" /* SwiftUtilitiesTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_41 /* Build configuration list for PBXNativeTarget "SwiftUtilitiesTests" */;
 			buildPhases = (
@@ -213,8 +213,8 @@
 				OBJ_49 /* PBXTargetDependency */,
 			);
 			name = SwiftUtilitiesTests;
-			productName = UtilitiesTests;
-			productReference = "Utilities::UtilitiesTests::Product" /* SwiftUtilitiesTests.xctest */;
+			productName = SwiftUtilitiesTests;
+			productReference = "SwiftUtilities::SwiftUtilitiesTests::Product" /* SwiftUtilitiesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,10 +240,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Utilities::Utilities" /* SwiftUtilities */,
-				"Utilities::SwiftPMPackageDescription" /* SwiftUtilitiesPackageDescription */,
-				"Utilities::UtilitiesPackageTests::ProductTarget" /* SwiftUtilitiesPackageTests */,
-				"Utilities::UtilitiesTests" /* SwiftUtilitiesTests */,
+				"SwiftUtilities::SwiftUtilities" /* SwiftUtilities */,
+				"SwiftUtilities::SwiftPMPackageDescription" /* SwiftUtilitiesPackageDescription */,
+				"SwiftUtilities::SwiftUtilitiesPackageTests::ProductTarget" /* SwiftUtilitiesPackageTests */,
+				"SwiftUtilities::SwiftUtilitiesTests" /* SwiftUtilitiesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,12 +291,12 @@
 /* Begin PBXTargetDependency section */
 		OBJ_39 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Utilities::UtilitiesTests" /* SwiftUtilitiesTests */;
+			target = "SwiftUtilities::SwiftUtilitiesTests" /* SwiftUtilitiesTests */;
 			targetProxy = 04FFAF2D2488816E00485F68 /* PBXContainerItemProxy */;
 		};
 		OBJ_49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Utilities::Utilities" /* SwiftUtilities */;
+			target = "SwiftUtilities::SwiftUtilities" /* SwiftUtilities */;
 			targetProxy = 04158B86246DE08300BD6DE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
