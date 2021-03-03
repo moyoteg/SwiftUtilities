@@ -28,7 +28,6 @@ let package = Package(
             name: "SwiftUtilities",
             dependencies: [
                 // 3rd party
-                "DeviceKit",
         ]),
         .testTarget(
             name: "SwiftUtilitiesTests",
