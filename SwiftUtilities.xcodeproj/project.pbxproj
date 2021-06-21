@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		04158B88246DE09100BD6DE7 /* MirrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04158B87246DE09100BD6DE7 /* MirrorExtensions.swift */; };
+		042E24AF2681021D004A332E /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E24AE2681021D004A332E /* CustomOperators.swift */; };
 		044217B924CA802600BCFAC8 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044217B824CA802600BCFAC8 /* FloatExtensions.swift */; };
 		0442181C24CF8CFA00BCFAC8 /* Endian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442181B24CF8CFA00BCFAC8 /* Endian.swift */; };
 		0442181E24CF8E3700BCFAC8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442181D24CF8E3700BCFAC8 /* Date.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		04158B87246DE09100BD6DE7 /* MirrorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirrorExtensions.swift; sourceTree = "<group>"; };
+		042E24AE2681021D004A332E /* CustomOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		044217B824CA802600BCFAC8 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
 		0442181B24CF8CFA00BCFAC8 /* Endian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endian.swift; sourceTree = "<group>"; };
 		0442181D24CF8E3700BCFAC8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				04A1EFD8248AB5D200FFBA3E /* BoolExtension.swift */,
 				04676668248B35A600704C19 /* PrivateKeyExtension.swift */,
 				04C0A306253F7AF0000C2271 /* URLExtensions.swift */,
+				042E24AE2681021D004A332E /* CustomOperators.swift */,
 			);
 			name = SwiftUtilities;
 			path = Sources/SwiftUtilities;
@@ -259,6 +262,7 @@
 				04A1EFD02489B40700FFBA3E /* IntExternsions.swift in Sources */,
 				0442181C24CF8CFA00BCFAC8 /* Endian.swift in Sources */,
 				04158B88246DE09100BD6DE7 /* MirrorExtensions.swift in Sources */,
+				042E24AF2681021D004A332E /* CustomOperators.swift in Sources */,
 				04C0A307253F7AF0000C2271 /* URLExtensions.swift in Sources */,
 				04A1EFD9248AB5D200FFBA3E /* BoolExtension.swift in Sources */,
 				0442181E24CF8E3700BCFAC8 /* Date.swift in Sources */,
