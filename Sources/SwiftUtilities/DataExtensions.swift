@@ -59,3 +59,9 @@ public extension Data {
 }
 
 extension Data: IntegerTransform {}
+
+public extension Data {
+    func subdata(in range: ClosedRange<Index>) -> Data {
+        return subdata(in: range.lowerBound ..< range.upperBound + 1)
+    }
+}

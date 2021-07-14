@@ -8,12 +8,12 @@
 import Foundation
 
 infix operator ??=
-public func ??=<T>(left: inout T?, right: @autoclosure () -> T) {
+public func ??= <T>(left: inout T?, right: @autoclosure () -> T) {
     left = left ?? right()
 }
 
 infix operator =??
-public func =??<T>(left: inout T, right: @autoclosure () -> T?) {
+public func =?? <T>(left: inout T, right: @autoclosure () -> T?) {
     left = right() ?? left
 }
 
@@ -26,7 +26,7 @@ extension Array {
 }
 
 infix operator !==
-public func !==<T>(left: inout T, right: T) where T:Equatable {
+public func !== <T>(left: inout T, right: T) where T:Equatable {
     if (left != right) {
         left = right
     }
