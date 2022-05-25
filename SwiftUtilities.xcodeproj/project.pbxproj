@@ -28,6 +28,7 @@
 		044217B924CA802600BCFAC8 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044217B824CA802600BCFAC8 /* FloatExtensions.swift */; };
 		0442181C24CF8CFA00BCFAC8 /* Endian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442181B24CF8CFA00BCFAC8 /* Endian.swift */; };
 		0442181E24CF8E3700BCFAC8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442181D24CF8E3700BCFAC8 /* DateExtensions.swift */; };
+		0446C5EC2819CC9A00E4EA72 /* AVFileTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446C5EB2819CC9A00E4EA72 /* AVFileTypeExtension.swift */; };
 		04676669248B35A600704C19 /* PrivateKeyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04676668248B35A600704C19 /* PrivateKeyExtensions.swift */; };
 		046BC0BB269CECFC00B044A8 /* MKCoordinateRegionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BC0B4269CECFC00B044A8 /* MKCoordinateRegionExtensions.swift */; };
 		046BC0BC269CECFC00B044A8 /* BindingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BC0B5269CECFC00B044A8 /* BindingExtensions.swift */; };
@@ -77,6 +78,7 @@
 		044217B824CA802600BCFAC8 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
 		0442181B24CF8CFA00BCFAC8 /* Endian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endian.swift; sourceTree = "<group>"; };
 		0442181D24CF8E3700BCFAC8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		0446C5EB2819CC9A00E4EA72 /* AVFileTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVFileTypeExtension.swift; sourceTree = "<group>"; };
 		04676668248B35A600704C19 /* PrivateKeyExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyExtensions.swift; sourceTree = "<group>"; };
 		046BC0B4269CECFC00B044A8 /* MKCoordinateRegionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateRegionExtensions.swift; sourceTree = "<group>"; };
 		046BC0B5269CECFC00B044A8 /* BindingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingExtensions.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				04676668248B35A600704C19 /* PrivateKeyExtensions.swift */,
 				04C0A306253F7AF0000C2271 /* URLExtensions.swift */,
 				04339C0027A1B40900879DE1 /* DigestExtensions.swift */,
+				0446C5EB2819CC9A00E4EA72 /* AVFileTypeExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				04158B88246DE09100BD6DE7 /* MirrorExtensions.swift in Sources */,
 				046BC0C0269CECFC00B044A8 /* MKCoordinateSpanExtensions.swift in Sources */,
 				046BC0C7269CED8900B044A8 /* KeyboardResponder.swift in Sources */,
+				0446C5EC2819CC9A00E4EA72 /* AVFileTypeExtension.swift in Sources */,
 				046BC0C1269CECFC00B044A8 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				042E24AF2681021D004A332E /* CustomOperators.swift in Sources */,
 				04C0A307253F7AF0000C2271 /* URLExtensions.swift in Sources */,
@@ -376,9 +380,9 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftUtilities.xcodeproj/SwiftUtilities_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -404,9 +408,9 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftUtilities.xcodeproj/SwiftUtilities_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
