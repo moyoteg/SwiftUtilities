@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		04158B88246DE09100BD6DE7 /* MirrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04158B87246DE09100BD6DE7 /* MirrorExtensions.swift */; };
+		041E48E72858D72200F67444 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E48E62858D72200F67444 /* BundleExtension.swift */; };
 		0422436827AA0EDE00B1B786 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422436727AA0EDE00B1B786 /* DoubleExtension.swift */; };
 		042E24AF2681021D004A332E /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E24AE2681021D004A332E /* CustomOperators.swift */; };
 		04339C0127A1B40900879DE1 /* DigestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04339C0027A1B40900879DE1 /* DigestExtensions.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		04158B87246DE09100BD6DE7 /* MirrorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MirrorExtensions.swift; sourceTree = "<group>"; };
+		041E48E62858D72200F67444 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		0422436727AA0EDE00B1B786 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		042E24AE2681021D004A332E /* CustomOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		04339C0027A1B40900879DE1 /* DigestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestExtensions.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				04C0A306253F7AF0000C2271 /* URLExtensions.swift */,
 				04339C0027A1B40900879DE1 /* DigestExtensions.swift */,
 				0446C5EB2819CC9A00E4EA72 /* AVFileTypeExtension.swift */,
+				041E48E62858D72200F67444 /* BundleExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				04A1EFDB248AC08700FFBA3E /* StringExtensions.swift in Sources */,
 				046BC0BF269CECFC00B044A8 /* UIFontExtensions.swift in Sources */,
+				041E48E72858D72200F67444 /* BundleExtension.swift in Sources */,
 				04676669248B35A600704C19 /* PrivateKeyExtensions.swift in Sources */,
 				044217B924CA802600BCFAC8 /* FloatExtensions.swift in Sources */,
 				04A1EFD02489B40700FFBA3E /* IntExtensions.swift in Sources */,
