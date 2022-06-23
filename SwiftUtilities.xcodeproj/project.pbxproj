@@ -26,6 +26,7 @@
 		0422436827AA0EDE00B1B786 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422436727AA0EDE00B1B786 /* DoubleExtension.swift */; };
 		042E24AF2681021D004A332E /* CustomOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042E24AE2681021D004A332E /* CustomOperators.swift */; };
 		04339C0127A1B40900879DE1 /* DigestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04339C0027A1B40900879DE1 /* DigestExtensions.swift */; };
+		0440307C2863DBCB00E3F95C /* LAContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0440307B2863DBCB00E3F95C /* LAContextExtension.swift */; };
 		044217B924CA802600BCFAC8 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044217B824CA802600BCFAC8 /* FloatExtensions.swift */; };
 		0442181C24CF8CFA00BCFAC8 /* Endian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442181B24CF8CFA00BCFAC8 /* Endian.swift */; };
 		0442181E24CF8E3700BCFAC8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442181D24CF8E3700BCFAC8 /* DateExtensions.swift */; };
@@ -77,6 +78,7 @@
 		0422436727AA0EDE00B1B786 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		042E24AE2681021D004A332E /* CustomOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperators.swift; sourceTree = "<group>"; };
 		04339C0027A1B40900879DE1 /* DigestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigestExtensions.swift; sourceTree = "<group>"; };
+		0440307B2863DBCB00E3F95C /* LAContextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAContextExtension.swift; sourceTree = "<group>"; };
 		044217B824CA802600BCFAC8 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
 		0442181B24CF8CFA00BCFAC8 /* Endian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endian.swift; sourceTree = "<group>"; };
 		0442181D24CF8E3700BCFAC8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				046BC0B5269CECFC00B044A8 /* BindingExtensions.swift */,
+				0440307B2863DBCB00E3F95C /* LAContextExtension.swift */,
 				046BC0BA269CECFC00B044A8 /* CLLocationCoordinate2DExtensions.swift */,
 				046BC0B7269CECFC00B044A8 /* ColorExtensions.swift */,
 				046BC0B6269CECFC00B044A8 /* EncodableExtensions.swift */,
@@ -313,6 +316,7 @@
 			files = (
 				04A1EFDB248AC08700FFBA3E /* StringExtensions.swift in Sources */,
 				046BC0BF269CECFC00B044A8 /* UIFontExtensions.swift in Sources */,
+				0440307C2863DBCB00E3F95C /* LAContextExtension.swift in Sources */,
 				041E48E72858D72200F67444 /* BundleExtension.swift in Sources */,
 				04676669248B35A600704C19 /* PrivateKeyExtensions.swift in Sources */,
 				044217B924CA802600BCFAC8 /* FloatExtensions.swift in Sources */,
