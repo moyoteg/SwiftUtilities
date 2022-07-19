@@ -41,7 +41,6 @@
 		046BC0C0269CECFC00B044A8 /* MKCoordinateSpanExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BC0B9269CECFC00B044A8 /* MKCoordinateSpanExtensions.swift */; };
 		046BC0C1269CECFC00B044A8 /* CLLocationCoordinate2DExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BC0BA269CECFC00B044A8 /* CLLocationCoordinate2DExtensions.swift */; };
 		046BC0C6269CED8900B044A8 /* DictionaryEncoderDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BC0C5269CED8900B044A8 /* DictionaryEncoderDecoder.swift */; };
-		046BC0C7269CED8900B044A8 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046BC0C3269CED8900B044A8 /* KeyboardResponder.swift */; };
 		04A1EFD02489B40700FFBA3E /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EFCF2489B40700FFBA3E /* IntExtensions.swift */; };
 		04A1EFD9248AB5D200FFBA3E /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EFD8248AB5D200FFBA3E /* BoolExtensions.swift */; };
 		04A1EFDB248AC08700FFBA3E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1EFDA248AC08700FFBA3E /* StringExtensions.swift */; };
@@ -93,7 +92,6 @@
 		046BC0B8269CECFC00B044A8 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		046BC0B9269CECFC00B044A8 /* MKCoordinateSpanExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKCoordinateSpanExtensions.swift; sourceTree = "<group>"; };
 		046BC0BA269CECFC00B044A8 /* CLLocationCoordinate2DExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtensions.swift; sourceTree = "<group>"; };
-		046BC0C3269CED8900B044A8 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		046BC0C5269CED8900B044A8 /* DictionaryEncoderDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoderDecoder.swift; sourceTree = "<group>"; };
 		04A1EFCF2489B40700FFBA3E /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		04A1EFD8248AB5D200FFBA3E /* BoolExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtensions.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 		046BC0C9269CEDAF00B044A8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				046BC0C3269CED8900B044A8 /* KeyboardResponder.swift */,
 				0438856E28721E2500323FF3 /* Reachability.swift */,
 				046BC0C5269CED8900B044A8 /* DictionaryEncoderDecoder.swift */,
 			);
@@ -331,7 +328,6 @@
 				046BC0BD269CECFC00B044A8 /* EncodableExtensions.swift in Sources */,
 				04158B88246DE09100BD6DE7 /* MirrorExtensions.swift in Sources */,
 				046BC0C0269CECFC00B044A8 /* MKCoordinateSpanExtensions.swift in Sources */,
-				046BC0C7269CED8900B044A8 /* KeyboardResponder.swift in Sources */,
 				0446C5EC2819CC9A00E4EA72 /* AVFileTypeExtension.swift in Sources */,
 				046BC0C1269CECFC00B044A8 /* CLLocationCoordinate2DExtensions.swift in Sources */,
 				042E24AF2681021D004A332E /* CustomOperators.swift in Sources */,
@@ -405,8 +401,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SwiftUtilities;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -433,8 +429,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SwiftUtilities;
-				TVOS_DEPLOYMENT_TARGET = 13.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -530,17 +526,17 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftUtilities.xcodeproj/SwiftUtilitiesTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SwiftUtilitiesTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 14.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Debug;
 		};
@@ -555,17 +551,17 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwiftUtilities.xcodeproj/SwiftUtilitiesTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = SwiftUtilitiesTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 14.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};

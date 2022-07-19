@@ -5,6 +5,7 @@
 //  Created by Moi Gutierrez on 6/22/22.
 //
 
+#if !os(tvOS)
 import Foundation
 import LocalAuthentication
 
@@ -38,3 +39,4 @@ public extension LAContext {
         return  self.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touchID : .none
     }
 }
+#endif
