@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DictionaryEncoder {
+public class DictionaryEncoder {
 
     private let encoder = JSONEncoder()
 
