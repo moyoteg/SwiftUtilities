@@ -9,6 +9,7 @@ import Foundation
 import CoreLocation
 import Combine
 
+#if !os(tvOS)
 public class LocationManager: NSObject, ObservableObject {
 
     public override init() {
@@ -68,3 +69,4 @@ extension LocationManager: CLLocationManagerDelegate {
     }
 
 }
+#endif
