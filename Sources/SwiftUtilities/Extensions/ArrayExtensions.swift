@@ -28,9 +28,20 @@ public extension Array where Element == UInt8 {
 extension Array: IntegerTransform where Element: FixedWidthInteger {}
 
 public extension Array {
+    
     subscript(circular index: Int) -> Element? {
         guard index >= 0 && !isEmpty else { return nil }
         guard index >= count else { return self[index] }
         return self[index % count]
     }
+    
+}
+
+public extension Array where Element: Hashable {
+    
+    func uniqued() -> [Element] {
+        var seen = Set<Element>()
+        return filter{ seen.insert($0).inserted }
+    }
+    
 }
