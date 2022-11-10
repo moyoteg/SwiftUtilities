@@ -6,9 +6,9 @@ import PackageDescription
 let package = Package(
     name: "SwiftUtilities",
     platforms: [
-            .iOS("14.5"),
+            .iOS("15"),
         .macOS(.v11),
-        .tvOS(.v14),
+        .tvOS("15"),
         .watchOS(.v7),
     ],
     products: [
