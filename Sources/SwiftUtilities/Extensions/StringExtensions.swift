@@ -104,3 +104,10 @@ public extension String {
         }
     }
 }
+
+public extension String {
+    func capitalizedFirstLetter() -> String {
+        guard !isEmpty else { return self }
+        return prefix(1).capitalized + dropFirst()
+    }
+}
