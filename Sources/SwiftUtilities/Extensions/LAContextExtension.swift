@@ -5,7 +5,7 @@
 //  Created by Moi Gutierrez on 6/22/22.
 //
 
-#if !os(tvOS)
+#if !os(tvOS) && !os(watchOS)
 import Foundation
 import LocalAuthentication
 

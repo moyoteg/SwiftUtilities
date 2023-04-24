@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if os(iOS)
 import SystemConfiguration
 
 public extension SwiftUtilities {
@@ -92,3 +93,4 @@ public extension SwiftUtilities {
         
     }
 }
+#endif

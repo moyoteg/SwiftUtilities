@@ -9,7 +9,7 @@ import Foundation
 import LocalAuthentication
 
 public enum Biometric {
-#if !os(tvOS)
+#if !os(tvOS) && !os(watchOS)
     public static let type = LAContext().biometryType
 #endif
 }
