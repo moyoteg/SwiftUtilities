@@ -43,3 +43,16 @@ public extension Date {
         return formatter.localizedString(for: self, relativeTo: Date())
     }
 }
+
+public extension Date {
+ 
+    var relativeDateString: String {
+        
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        formatter.dateTimeStyle = .named
+        
+        return formatter.localizedString(for: self, relativeTo: Date.now)
+    }
+    
+}
