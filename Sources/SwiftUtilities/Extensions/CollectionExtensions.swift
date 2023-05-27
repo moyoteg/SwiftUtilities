@@ -12,3 +12,9 @@ public extension Collection where Indices.Iterator.Element == Index {
      return (startIndex <= index && index < endIndex) ? self[index] : nil
    }
 }
+
+public extension Collection {
+    var array: [Element]? {
+        Array(self) as? [Element]
+    }
+}
