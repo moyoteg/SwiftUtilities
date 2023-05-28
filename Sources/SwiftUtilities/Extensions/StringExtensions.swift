@@ -111,3 +111,10 @@ public extension String {
         return prefix(1).capitalized + dropFirst()
     }
 }
+
+extension String: Identifiable {
+    public typealias ID = Int
+    public var id: Int {
+        return hash
+    }
+}
