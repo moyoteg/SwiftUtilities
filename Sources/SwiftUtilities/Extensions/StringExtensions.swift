@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 public extension String {
    
@@ -116,5 +117,14 @@ extension String: Identifiable {
     public typealias ID = Int
     public var id: Int {
         return hash
+    }
+}
+
+public extension String {
+    var isValidURL: Bool {
+        if let url = NSURL(string: self) {
+            return UIApplication.shared.canOpenURL(url as URL)
+        }
+        return false
     }
 }
