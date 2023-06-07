@@ -13,10 +13,19 @@ public class LocationManager: NSObject, ObservableObject, CLLocationManagerDeleg
     
     @Published public var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published public var currentLocation: CLLocation?
+    @Published public var locationHistory: [CLLocation] = []
     @Published public var heading: CLHeading?
     @Published public var rangingBeacons: [CLBeacon] = []
     @Published public var monitoringRegions: [CLRegion] = []
-    @Published public var didVisit: CLVisit?
+    @Published public var visitHistory: [CLVisit] = []
+    
+    @Published public var didStartMonitoringFor: CLRegion?
+    @Published public var monitoringDidFailFor: CLRegion?
+    @Published public var didDetermineState: CLRegionState?
+    @Published public var didRange: [CLBeacon]?
+    @Published public var didFailRangingFor: CLBeaconIdentityConstraint?
+    @Published public var didPauseLocationUpdates: CLLocationManager?
+    @Published public var didResumeLocationUpdates: CLLocationManager?
     
     public override init() {
         super.init()
@@ -77,6 +86,7 @@ public class LocationManager: NSObject, ObservableObject, CLLocationManagerDeleg
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         currentLocation = location
+        locationHistory.append(location)
     }
     
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -110,36 +120,43 @@ public class LocationManager: NSObject, ObservableObject, CLLocationManagerDeleg
     }
     
     public func locationManager(_ manager: CLLocationManager, didVisit visit: CLVisit) {
-        didVisit = visit
+        visitHistory.append(visit)
     }
     
     // MARK: - CLLocationManagerDelegate
     
     public func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         // Handle start of region monitoring
+        self.didStartMonitoringFor = didStartMonitoringFor
     }
     
     public func locationManager(_ manager: CLLocationManager, monitoringDidFailFor region: CLRegion?, withError error: Error) {
         // Handle region monitoring failure
+        self.monitoringDidFailFor = monitoringDidFailFor
     }
     
     public func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         // Handle region state determination
+        self.didDetermineState = didDetermineState
     }
     
     public func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
         // Handle ranging beacons with constraints
+        self.didRange = didRange
     }
     
     public func locationManager(_ manager: CLLocationManager, didFailRangingFor beaconConstraint: CLBeaconIdentityConstraint, error: Error) {
         // Handle ranging beacons failure with constraints
+        self.didFailRangingFor = didFailRangingFor
     }
     
     public func locationManager(_ manager: CLLocationManager, didPauseLocationUpdates locationUpdates: CLLocationManager) {
         // Handle location updates pause
+        self.didPauseLocationUpdates = didPauseLocationUpdates
     }
     
     public func locationManager(_ manager: CLLocationManager, didResumeLocationUpdates locationUpdates: CLLocationManager) {
         // Handle location updates resume
+        self.didResumeLocationUpdates = didResumeLocationUpdates
     }
 }
