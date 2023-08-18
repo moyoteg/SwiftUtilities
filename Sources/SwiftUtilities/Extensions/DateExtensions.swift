@@ -50,7 +50,7 @@ public extension Date {
         
         let formatter = RelativeDateTimeFormatter()
         formatter.unitsStyle = .full
-        formatter.dateTimeStyle = .named
+        formatter.dateTimeStyle = .numeric
         
         return formatter.localizedString(for: self, relativeTo: Date.now)
     }
