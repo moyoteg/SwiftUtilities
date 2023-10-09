@@ -25,3 +25,9 @@ extension CLLocationCoordinate2D {
         return from.distance(from: to)
     }
 }
+
+extension CLLocationCoordinate2D: Identifiable {
+    public var id: String {
+        "\(latitude)-\(longitude)"
+    }
+}

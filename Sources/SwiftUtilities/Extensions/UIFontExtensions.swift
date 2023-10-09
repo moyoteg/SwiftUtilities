@@ -5,6 +5,7 @@
 //  Created by Moi Gutierrez on 1/18/21.
 //
 
+#if !os(macOS)
 import UIKit
 
 // This extension is taken from this SO answer https://stackoverflow.com/a/36871032/5508175
@@ -33,3 +34,4 @@ public extension UIFont {
         return true
     }
 }
+#endif
