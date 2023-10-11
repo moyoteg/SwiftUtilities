@@ -35,4 +35,15 @@ public extension URL {
         guard let url = URLComponents(string: self.absoluteString) else { return nil }
         return url.queryItems?.first(where: { $0.name == queryParam })?.value
     }
+    
+    func readWithPermission() -> Result<String,Error> {
+        let accessing = self.startAccessingSecurityScopedResource()
+        defer {
+            if accessing {
+                self.stopAccessingSecurityScopedResource()
+            }
+        }
+        return Result { try String(contentsOf: self) }
+    }
 }
+
