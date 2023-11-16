@@ -57,3 +57,9 @@ public extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+public extension Double {
+    func toRadians() -> Double {
+        return self * .pi / 180
+    }
+}

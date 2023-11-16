@@ -141,3 +141,9 @@ public extension String {
         }
     }
 }
+
+public extension String {
+    func removingLeadingWhitespace() -> String {
+        return self.replacingOccurrences(of: "^\\s+", with: "", options: .regularExpression)
+    }
+}
