@@ -9,6 +9,35 @@ import Foundation
 import SwiftUI
 
 public extension String {
+    
+    func acronymOrFormattedString() -> String {
+        let prepositionsAndConjunctions = ["and", "of"]
+        let words = self.components(separatedBy: " ")
+        
+        // Filter out specified prepositions and conjunctions, and check if multiple significant words remain.
+        let significantWords = words.filter { !prepositionsAndConjunctions.contains($0.lowercased()) }
+        guard significantWords.count > 1 else { return self.capitalizingFirstLetter() }
+        
+        // Form the acronym or formatted string depending on the number of significant words.
+        let acronym = significantWords.dropLast().reduce("") { partialResult, word in
+            partialResult + (word.first?.uppercased() ?? "")
+        }
+        
+        let lastWordFormatted = significantWords.last?.withOnlyFirstLetterUppercased() ?? ""
+        
+        return acronym + (acronym.isEmpty ? "" : " ") + lastWordFormatted
+    }
+    
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    func withOnlyFirstLetterUppercased() -> String {
+        return prefix(1).uppercased() + dropFirst().lowercased()
+    }
+}
+
+public extension String {
    
     func convertToValidFileName() -> String {
        let invalidFileNameCharactersRegex = "[^a-zA-Z0-9_]+"
